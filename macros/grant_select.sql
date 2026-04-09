@@ -9,4 +9,6 @@
 
     {{ log('Granting select on all tables and views in schema ' ~ target.schema ~ ' to role ' ~ role, info=true)}}
     {% do run_query(sql) %}
+    {{ log('Privs granted', info=true)}}
+    
 {% endmacro %}
